@@ -3,18 +3,18 @@
 
 
 /**
- * struct list_s - singly linked list
+ * struct list_s - singly linked list Task
  * @str: string - (malloc'ed string)
  * @len: The length of the string
- * @next: This will points to the next node
+ * @next: This points to the next node
  *
  * Description: singly linked list node structure
  */
 typedef struct list_s
 {
-	char *str;
-	unsigned int len;
-	struct list_s *next;
+        char *str;
+        unsigned int len;
+        struct list_s *next;
 } list_t;
 
 

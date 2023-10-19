@@ -7,7 +7,7 @@
  * @head: double pointer to the list_t list
  * @str: string to put in the new node
  *
- * Return: The address of the new element, or NULL if failed
+ * Return: The address of new element, or NULL if failed
  * Project Singly linked lists
  */
 
