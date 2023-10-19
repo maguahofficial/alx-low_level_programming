@@ -10,33 +10,32 @@
  * Return: The address of the new element, or NULL if failed
  * Project Singly linked lists
  */
+
 list_t *add_node_end(list_t **head, const char *str)
 {
- list_t *new;
- list_t *temp = *head;
- unsigned int len = 0;
+	list_t *new;
+	list_t *temp = *head;
+	unsigned int len = 0;
 
- while (str[len])
- len++;
+	while (str[len])
+		len++;
 
- new = malloc(sizeof(list_t));
- if (!new)
- return (NULL);
+	new = malloc(sizeof(list_t));
 
- new->str = strdup(str);
- new->len = len;
- new->next = NULL;
+	if (!new)
+		return (NULL);
 
- if (*head == NULL)
- {
- *head = new;
- return (new);
- }
+	new->str = strdup(str);
+	new->len = len;
+	new->next = NULL;
+	if (*head == NULL)
+	{
+		*head = new;
+		return (new);
+	}
+	while (temp->next)
+		temp = temp->next;
 
- while (temp->next)
- temp = temp->next;
-
- temp->next = new;
-
- return (new);
+	temp->next = new;
+	return (new);
 }
