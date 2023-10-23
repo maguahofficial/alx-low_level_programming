@@ -10,7 +10,7 @@
  * @next: points to next node
  *
  * Description: singly linked list structure
- * More singly linked lists task
+ * the 0-print_listint.c file More singly linked lists task
  */
 typedef struct listint_s
 {
