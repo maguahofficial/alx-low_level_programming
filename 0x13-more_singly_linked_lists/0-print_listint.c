@@ -1,5 +1,4 @@
 #include "lists.h"
-
 /**
  * print_listint - prints all elements of a linked list
  * @h: linked list of type listint_t to print
@@ -13,9 +12,8 @@ size_t print_listint(const listint_t *h)
 	while (h)
 	{
 		printf("%d\n", h->n);
-		numvar++;
+		numvar++;ee
 		h = h->next;
 	}
-
 	return (numvar);
 }
