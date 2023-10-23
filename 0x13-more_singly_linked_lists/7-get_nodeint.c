@@ -2,7 +2,8 @@
 
 
 /**
- * get_nodeint_at_index - this returns the node at a certain index in a linked list
+ * get_nodeint_at_index - this returns the node at
+ * a certain index in a linked list
  * @head: the first node in the linked list
  * @index: of the node to return
  * 7-get_nodeint.c file in the more_singly_linked_lists task alx
