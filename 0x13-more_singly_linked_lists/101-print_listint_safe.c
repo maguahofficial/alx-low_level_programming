@@ -41,7 +41,7 @@ size_t looped_listint_len(const listint_t *head)
 			{
 				nodessize_tvar++;
 				tortoisevariable = tortoisevariable->next;
-                        }
+			}
 			return (nodessize_tvar);
 		}
 
