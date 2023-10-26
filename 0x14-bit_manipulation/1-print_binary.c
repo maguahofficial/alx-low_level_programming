@@ -1,12 +1,14 @@
 #include "main.h"
 
 /**
- * print_binary - code that prints the binary equivalent of a decimal number
- * @n: number to print in binary
+ * _pow - code that prints the binary equivalent
+ * of a decimal number
+ * @base: base of exponent
+ * @power: power of exponent
  * the 1-print_binary.c Bit manipulation task
- * Return: value of (base ^ power)
+ *
+ * Return: returns value of (base ^ power)
 */
-
 unsigned long int _pow(unsigned int base, unsigned int power)
 {
 	unsigned long int numlongintvarble;
