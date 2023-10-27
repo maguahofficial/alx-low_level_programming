@@ -18,6 +18,7 @@ unsigned int binary_to_uint(const char *b)
 	{
 		if (b[intvariable] < '0' || b[intvariable] > '1')
 			return (0);
+
 		dec_valvariable = 2 * dec_valvariable + (b[intvariable] - '0');
 	}
 
