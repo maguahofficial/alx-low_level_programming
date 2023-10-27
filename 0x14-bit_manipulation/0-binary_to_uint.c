@@ -1,6 +1,5 @@
 #include "main.h"
 
-
 /**
  * binary_to_uint - code converts a binary number to a unsigned int
  * @b: the string containing the binary number
@@ -21,5 +20,6 @@ unsigned int binary_to_uint(const char *b)
 			return (0);
 		dec_valvariable = 2 * dec_valvariable + (b[intvariable] - '0');
 	}
+
 	return (dec_valvariable);
 }
