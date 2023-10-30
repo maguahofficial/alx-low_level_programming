@@ -118,7 +118,7 @@ void print_data_function(unsigned char *e_ident)
  *  * print_version_function - function prints the version of an ELF header.
  *   * @e_ident: pointer to an array containing the ELF version.
  *   100-elf_header.c file in the 0x15. C - File I/O task
- *    */
+ */
 void print_version_function(unsigned char *e_ident)
 {
 	printf(" Version: %d", e_ident[EI_VERSION]);
@@ -187,14 +187,12 @@ void print_osabi_function(unsigned char *e_ident)
  */
 void print_abi_function(unsigned char *e_ident)
 {
-	printf(" ABI Version: %d\n",
-			e_ident[EI_ABIVERSION]);
+	printf(" ABI Version: %d\n", e_ident[EI_ABIVERSION]);
 }
 
 /**
  * print_type_function - function prints the type of an ELF header.
  * @e_type:  ELF type.
- * 100-elf_header.c file in the 0x15. C - File I/O task
  * @e_ident: pointer to an array containing the ELF class.
  */
 void print_type_function(unsigned int e_type, unsigned char *e_ident)
@@ -255,7 +253,6 @@ void print_entry_function(unsigned long int e_entry, unsigned char *e_ident)
  * close_elf_function - function closes an ELF file.
  * @elf: file descriptor of the ELF file.
  * 100-elf_header.c file in the 0x15. C - File I/O task
- * 
  */
 void close_elf_function(int elfvarble)
 {
