@@ -21,7 +21,7 @@ char *create_buffer_function(char *file)
 
 	if (buffervarble == NULL)
 	{
-		dprintf(STDERR_FILENO,"Error: Can't write to %s\n", file);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file);
 		exit(99);
 	}
 
@@ -60,7 +60,7 @@ int main(int argc, char *argv[])
 {
 	int fromintvarble, tointvar, rvariable, wvariable;
 	char *buffercharvar;
-	
+
 	if (argc != 3)
 	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
@@ -75,16 +75,16 @@ int main(int argc, char *argv[])
 	do {
 		if (fromintvarble == -1 || rvariable == -1)
 		{
-			dprintf(STDERR_FILENO,"Error: Can't read from file %s\n", argv[1]);
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 			free(buffercharvar);
 			exit(98);
-                }
+		}
 
 		wvariable = write(tointvar, buffercharvar, rvariable);
 
 		if (tointvar == -1 || wvariable == -1)
 		{
-			dprintf(STDERR_FILENO,"Error: Can't write to %s\n", argv[2]);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 			free(buffercharvar);
 			exit(99);
 		}
@@ -92,7 +92,7 @@ int main(int argc, char *argv[])
 		rvariable = read(fromintvarble, buffercharvar, 1024);
 		tointvar = open(argv[2], O_WRONLY | O_APPEND);
 
-	}while (rvariable > 0);
+	} while (rvariable > 0);
 
 	free(buffercharvar);
 	close_file_function(fromintvarble);
