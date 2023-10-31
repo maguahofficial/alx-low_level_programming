@@ -19,7 +19,7 @@ void close_elf_function(int elfvarble);
 
 /**
  * check_elf_function - function checks if a file is an ELF file.
- * @e_ident: pointer to an array containing the ELF magic numbers.
+ * @e_identvarble: pointer to an array containing the ELF magic numbers.
  *
  * Description: So if the file is not an ELF file - exit code 98.
  * 100-elf_header.c file in the 0x15. C - File I/O task
@@ -251,7 +251,7 @@ void print_entry_function(unsigned long int e_entry, unsigned char *e_ident)
 
 /**
  * close_elf_function - function closes an ELF file.
- * @elf: file descriptor of the ELF file.
+ * @elfvarble: file descriptor of the ELF file.
  * 100-elf_header.c file in the 0x15. C - File I/O task
  */
 void close_elf_function(int elfvarble)
