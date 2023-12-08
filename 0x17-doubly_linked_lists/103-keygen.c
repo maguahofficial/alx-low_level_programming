@@ -11,23 +11,23 @@
  */
 int main(int __attribute__((__unused__)) argc, char *argv[])
 {
-	char passwordvrble[7], *codexvrble;
+	char passwordvrble[7], *codexvrb;
 	int lenvrble = strlen(argv[1]), ivrble, tmpvrble;
 
-	codexvrble = "A-CHRDw87lNS0E9B2TibgpnMVys5XzvtOGJcYLU+4mjW6fxqZeF3Qa1rPhdKIouk";
+	codexvrb = "A-CHRDw87lNS0E9B2TibgpnMVys5XzvtOGJcYLU+4mjW6fxqZeF3Qa1rPhdKIouk";
 
 	tmpvrble = (lenvrble ^ 59) & 63;
-	passwordvrble[0] = codexvrble[tmpvrble];
+	passwordvrble[0] = codexvrb[tmpvrble];
 
 	tmpvrble = 0;
 	for (ivrble = 0; ivrble < lenvrble; ivrble++)
 		tmpvrble += argv[1][ivrble];
-	passwordvrble[1] = codexvrble[(tmpvrble ^ 79) & 63];
+	passwordvrble[1] = codexvrb[(tmpvrble ^ 79) & 63];
 
 	tmpvrble = 1;
 	for (ivrble = 0; ivrble < lenvrble; ivrble++)
 		tmpvrble *= argv[1][ivrble];
-	passwordvrble[2] = codexvrble[(tmpvrble ^ 85) & 63];
+	passwordvrble[2] = codexvrb[(tmpvrble ^ 85) & 63];
 
 	tmpvrble = 0;
 	for (ivrble = 0; ivrble < lenvrble; ivrble++)
@@ -36,16 +36,16 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 			tmpvrble = argv[1][ivrble];
 	}
 	srand(tmpvrble ^ 14);
-	passwordvrble[3] = codexvrble[rand() & 63];
+	passwordvrble[3] = codexvrb[rand() & 63];
 
 	tmpvrble = 0;
 	for (ivrble = 0; ivrble < lenvrble; ivrble++)
 		tmpvrble += (argv[1][ivrble] * argv[1][ivrble]);
-	passwordvrble[4] = codexvrble[(tmpvrble ^ 239) & 63];
+	passwordvrble[4] = codexvrb[(tmpvrble ^ 239) & 63];
 
 	for (ivrble = 0; ivrble < argv[1][0]; ivrble++)
 		tmpvrble = rand();
-	passwordvrble[5] = codexvrble[(tmpvrble ^ 229) & 63];
+	passwordvrble[5] = codexvrb[(tmpvrble ^ 229) & 63];
 
 	passwordvrble[6] = '\0';
 	printf("%s", passwordvrble);
